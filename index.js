@@ -1,28 +1,25 @@
 // Code your solutions in this file
 // Write your solution in this file!
-const employee = {
-    userName: "Sam", 
-    streetAddress: "street1",
-};
 
-function updateEmployeeWithKeyAndValue(employee, key, value) {
-    let copyOfEmployee = {...employee};
-    copyOfEmployee[key] = value;
-    return copyOfEmployee;
+
+function writeCards(names, event) {
+    const messages = [];
+    for (let i = 0; i < names.length; i++) {
+        const message = `Thank you, ${names[i]}, for the wonderful ${event} gift!`;
+        messages.push(message);
+
+    }
+return messages;
 }
 
-function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
-    employee[key] = value;
-    return employee;
-}
+(writeCards(["Guadalupe", "Ollie", "Aki"], "surprise"));
 
-function deleteFromEmployeeByKey(employee, key) {
-    let copyOfEmployee = {...employee};
-    delete copyOfEmployee[key];
-    return copyOfEmployee;
-}
 
-function destructivelyDeleteFromEmployeeByKey(employee, key) {
-    delete employee[key];
-    return employee;
+function countDown() {
+    let countDown = 10;
+    while (countDown >=0) {
+        countDown--;
+        console.log(countDown);
+    }
+return countDown;
 }
